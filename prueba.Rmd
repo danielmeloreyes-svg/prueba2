@@ -1,0 +1,31 @@
+---
+title: "Simulación de Ventas"
+author: "Daniel"
+output: 
+  github_document:
+    html_preview: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.path = "figures/", echo = TRUE)
+```
+
+## Tabla de ventas
+
+```{r}
+ventas <- data.frame(
+  Meses = c("Enero", "Febrero", "Marzo"),
+  Ventas = c(1200, 1350, 1600)
+)
+ventas
+```
+
+## Gráfico de ventas
+
+```{r}
+barplot(ventas$Ventas,
+        names.arg = ventas$Meses,
+        col = "steelblue",
+        main = "Ventas por Mes",
+        ylab = "Monto en USD")
+```
